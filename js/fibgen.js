@@ -33,9 +33,6 @@ function callBack() {
 //     return multiple;
 // }
 
-
-
-
 //Fibonacci Generator
 var numbers = [];
 
@@ -53,3 +50,24 @@ function startGen() {
         }
     }
 }
+
+//  What is the difference between the sum of the squares 
+//  of the first ten natural numbers, 
+//  and the square of the sum of the first ten natural numbers?
+let sumButton = document.getElementById("sumSquare");
+sumButton.addEventListener("click", totalSum);
+
+function totalSum() {
+    let squared = [];
+    let sum = [];
+    for (var i = 1; i < 11; i++) {
+        squared.push(Math.pow(i, 2));
+        sum.push(i);
+    };
+    let squaredSum = squared.reduce(function(hold, run){
+        return hold + run;});
+    let sumSquared = Math.pow((sum.reduce(
+            function (hold, run) {
+            return hold + run;})),2);
+    console.log(squaredSum + sumSquared);
+};
