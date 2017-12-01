@@ -1,0 +1,334 @@
+body {
+    margin: 0;
+    font-family: 'Economica', sans-serif;
+    font-size: 1.2em;
+}
+
+/**sticky nav**/
+nav {
+    background-color: black;
+    overflow: hidden;
+    top: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+}
+
+nav ul {
+    float: left;
+    margin: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin: 1em;
+}
+
+nav li:hover:nth-child(4) a {
+    color: rgba(255, 163, 57, 1);
+}
+
+nav li:first-child:hover {
+    background-color: slategray;
+}
+
+nav li:last-child:active {
+    margin-left: 5px;
+    margin-right: 5px;
+    background-color: slategray;
+}
+
+nav li a {
+    color: white;
+    text-decoration: none;
+}
+
+#head {
+    float: right;
+    color: white;
+    margin: .3em 2em 0 0;
+    font-size: 1.2em;
+}
+
+/*** index ***/
+
+.lorem {
+    width: 75%;
+    margin: 6em auto 2em;
+}
+
+.loremMain {
+    margin: 4em auto;
+}
+
+.mainHeader {
+    border-bottom: 1px solid black;
+    text-align: center;
+}
+
+.legend {
+    width: 60%;
+    margin: auto;
+}
+
+.legend li {
+    font-size: 1.3em;
+    letter-spacing: .1em;
+}
+
+.legend a {
+    text-decoration: none;
+    color: black;
+}
+
+.legend a:hover {
+    text-shadow: .2em .2em 1em rgba(0,0,0,.7);
+}
+
+.README {
+    font-size: .5em;
+    margin-left: 1em;
+}
+
+/** input sync **/
+
+.syncHeader {
+    margin: 3em auto .5em auto;
+    text-align: center;
+    border-bottom: 1px solid black;
+    width: 50%;
+}
+
+h2.syncHeader {
+    margin-top: .5em;
+    border-bottom: none;
+}
+
+.inputSync {
+    margin: 3em auto 10em;
+    text-align: center;
+}
+
+.inputSync input {
+    margin: 1em;
+}
+
+#num {
+    font-family: "Audiowide", cursive;
+    padding-left: 1.5em;
+    font-size: 1.3em;
+}
+
+
+/*****  math   ******/
+
+.mathMain {
+    width: 70%;
+    margin: 8em auto;
+    text-align: center;
+}
+
+.mathMain h1 {
+    border-bottom: 1px solid black;
+}
+
+.mathWrap {
+    margin: 4em auto;
+}
+
+.numChallenge {
+    width: 70%;
+    font: .5em;
+    margin: auto;
+}
+
+.answer {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+#fibGen {
+    margin: 2.5em auto;
+}
+
+
+
+/***********************
+****** CSS SHAPES  *****
+************************/
+
+shapeHeader {
+    margin: 1em auto;
+    text-align: center;
+}
+
+.shapeMain {
+    width: 60%;
+    margin: 4em auto 4em;
+}
+
+.backdrop {
+    margin: 0 auto;
+    background-color: rgba(45, 79, 79, 1);
+    width: 100%;
+    height: 70vw;
+    position: relative;
+    border: .3em double white;
+}
+
+.ufo {
+    z-index: 1;
+    margin: 0 auto;
+    position: absolute;
+    left: 20%;
+    top: 30%;
+    width: 50%;
+}
+
+.topTriangle {
+    margin: 0 auto;
+	width: 0;
+	border-left: 3vw solid transparent;
+	border-right: 3vw solid transparent;
+    border-bottom: 7vw solid rgba(182, 31, 38, 1);
+}
+
+.trapezoid {
+    margin: 0 auto;
+    width: 12vw;
+	border-top: 7.2vw solid rgba(182, 31, 38, 1);
+	border-left: 3.5vw solid transparent;
+	border-right: 3.5vw solid transparent;
+}
+
+.bottomTriangle {
+    width: 0;
+    border-left: 1.45vw solid transparent;
+    border-right: 1.45vw solid transparent;
+    border-top: 2.85vw solid rgba(255, 163, 57, 1);
+}
+
+#t1 {
+    float: left;
+}
+
+#t2 {
+    float: right;
+}
+
+
+.lightspeed {
+    z-index: -1;
+}
+
+.star {
+    display: inline-block;
+    background: white;
+    width: 1.5vw;
+    height: 1.5vw;
+    position: relative;
+    transform: rotate(20deg);
+    margin: 1vw 3vw;
+    animation-name: starfall;
+    animation-duration: 1.9s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+}
+
+.star:before {
+    content: "";
+    position: absolute; 
+    height: 1.5vw;
+    width: 1.5vw;
+    background: white;
+    transform: rotate(135deg);
+}
+
+.star:nth-child(2) {
+    animation-duration: 1.4s;
+}
+
+.star:nth-child(3) {
+    animation-duration: 2s;
+}
+
+.star:nth-child(4) {
+    animation-duration: 1.8s;
+}
+
+.star:nth-child(5) {
+    animation-duration: 1.5s;   
+}
+
+.star:nth-child(6) {
+    animation-duration: 2.3s;   
+}
+
+.star:nth-child(7) {
+    animation-duration: 1.3s;   
+}
+
+.star:nth-child(8) {
+    animation-duration: 1.6s;  
+}
+
+@keyframes starfall {
+    from {
+        transform: translateY(-4vw);
+    } to {
+        transform: translateY(70vw); 
+    }
+}
+
+/* experimentation w/ 5point star
+initial layout pulled from CSS tricks.
+placed here for future reference.*/
+
+/* .star {
+    margin: 2vw 0;
+    position: relative;
+    display: block;
+    color: white;
+    width: 0px;
+    height: 0px;
+    border-right:  4vw solid transparent;
+    border-bottom: 2.8vw  solid white;
+    border-left:   4vw solid transparent;
+    transform:      rotate(35deg);
+ }
+
+ .star:before {
+    border-bottom: 3.2vw solid white;
+    border-left: 1.3vw solid transparent;
+    border-right: 1.3vw solid transparent;
+    position: absolute;
+    height: 0;
+    width: 0;
+    top: 1.9vw;
+    left: 2.4vw;
+    display: block;
+    content: '';
+    transform: rotate(-35deg);
+ }
+
+ .star:after {
+    position: absolute;
+    display: block;
+    color: red;
+    top: 3px;
+    left: 4.1vw;
+    width: 0px;
+    height: 0px;
+    border-right: 4vw solid transparent;
+    border-bottom: 2.9vw solid white;
+    border-left: 4vw solid transparent;
+    transform:      rotate(-70deg);
+    content: '';
+ } */
+
+ @media (max-width: 855px) {
+     .shapeNav{
+         visibility: hidden;
+     }
+ }
