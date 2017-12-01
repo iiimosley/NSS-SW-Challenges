@@ -1,6 +1,6 @@
 //smallest number -- no remainder
 let remainderButton = document.getElementById("remainder");
-remainderButton.addEventListener("click", callBack);
+remainderButton.addEventListener("click", callBack, { once: true });
 
 function callBack() {
     console.log("looking for answer...")
@@ -37,7 +37,7 @@ function callBack() {
 var numbers = [];
 
 let genButton = document.getElementById("fibGen");
-genButton.addEventListener("click", startGen);
+genButton.addEventListener("click", startGen, {once: true});
 
 function startGen() {
     console.log("under construction");
@@ -47,6 +47,7 @@ function startGen() {
             console.log(1);
         } else {
             console.log(i);
+            
         }
     }
 }
@@ -55,12 +56,12 @@ function startGen() {
 //  of the first ten natural numbers, 
 //  and the square of the sum of the first ten natural numbers?
 let sumButton = document.getElementById("sumSquare");
-sumButton.addEventListener("click", totalSum);
+sumButton.addEventListener("click", function () {totalSum(10)}, {once: true});
 
-function totalSum() {
+function totalSum(e) {
     let squared = [];
     let sum = [];
-    for (var i = 1; i < 11; i++) {
+    for (var i = 1; i < e+1; i++) {
         squared.push(Math.pow(i, 2));
         sum.push(i);
     };
@@ -75,3 +76,5 @@ function totalSum() {
     console.log("sum of numbers squared", sumSquared);
     console.log("squared sum - sum squared",squaredSum - sumSquared);
 };
+
+

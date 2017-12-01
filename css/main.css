@@ -153,7 +153,12 @@ h2.syncHeader {
     font-size: .8em;
     border-radius: .7em;
     outline: none;
+    background: linear-gradient(to top, rgba(200,248,254,.7), rgba(255,255,255,.7));
 }
+
+.mathMain button:hover {
+    background: linear-gradient(to top, rgba(241,248,254,1), rgba(245,245,245,1));
+} 
 
 .mathMain button:active {
     box-shadow: .1em .1em 1em rgba(0,0,0,.7);
@@ -163,11 +168,6 @@ h2.syncHeader {
 /***********************
 ****** CSS SHAPES  *****
 ************************/
-
-shapeHeader {
-    margin: 1em auto;
-    text-align: center;
-}
 
 .shapeMain {
     width: 60%;
@@ -334,7 +334,47 @@ placed here for future reference.*/
     content: '';
  } */
 
- @media (max-width: 855px) {
+
+/*********************
+***** Happy Numbers **
+*********************/
+
+.happyMain {
+    width: 80%;
+    margin: 6em auto;
+    text-align: center;
+}
+
+.happyTag {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    border-bottom: 1px solid black;
+}
+
+#happyButton {
+    font-size: 4em;
+    margin: .3em auto;
+    padding: .1em .4em 0;
+    border-radius: .4em;
+    outline: none;
+    background: linear-gradient(to top, rgba(200,248,254,.7), rgba(255,255,255,.7));
+    cursor: pointer;
+}
+
+#happyButton:hover {
+    background: linear-gradient(to top, rgba(241,248,254,1), rgba(245,245,245,1));
+    box-shadow: .1em .1em 1em gold;
+}
+
+#happyButton:active {
+    background: linear-gradient(to top, slateblue, orange);
+}
+
+
+/**** media q ****/
+
+ @media (max-width: 749px) {
      .shapeNav{
          visibility: hidden;
      }
