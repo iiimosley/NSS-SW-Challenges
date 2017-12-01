@@ -1,11 +1,39 @@
 //smallest number -- no remainder
 let remainderButton = document.getElementById("remainder");
-remainderButton.addEventListener("click", runRemainder);
+remainderButton.addEventListener("click", callBack);
 
-function runRemainder() {
-for (var i = 0; i < 10; i++) {
-    console.log ("nope", "nvm");
-}};
+function callBack() {
+    console.log("looking for answer...")
+}
+
+// lcm(a, b) = a × b / gcd(a, b)
+
+// wwwwwwwwtttttttffffffffuuuuuuuuuuuu
+// function leastCommonMultiple(min, max) {
+//     function range(min, max) {
+//         var arr = [];
+//         for (var i = min; i <= max; i++) {
+//             arr.push(i);
+//         }
+//         return arr;
+//     }
+    
+//     function gcd(a, b) {
+//         return !b ? a : gcd(b, a % b);
+//     }
+    
+//     function lcm(a, b) {
+//         return (a * b) / gcd(a, b);
+//     }
+    
+//     var multiple = min;
+//     range(min, max).forEach(function (n) {
+//         multiple = lcm(multiple, n);
+//     });
+//     return multiple;
+// }
+
+
 
 
 //Fibonacci Generator
