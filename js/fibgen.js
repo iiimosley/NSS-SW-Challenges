@@ -69,5 +69,9 @@ function totalSum() {
     let sumSquared = Math.pow((sum.reduce(
             function (hold, run) {
             return hold + run;})),2);
-    console.log(squaredSum - sumSquared);
+    console.log("squared numbers", squared);
+    console.log("natural numbers", sum);
+    console.log("sum of squared numbers", squaredSum);
+    console.log("sum of numbers squared", sumSquared);
+    console.log("squared sum - sum squared",squaredSum - sumSquared);
 };
