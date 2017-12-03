@@ -41,17 +41,13 @@ let genButton = document.getElementById("fibGen");
 genButton.addEventListener("click", startGen, {once: true});
 
 function startGen() {
-    console.log("under construction");
-    for (var i = 0; i <= 21; i++) {
-        if (i===0) {
-            console.log(0);
-            console.log(1);
-        } else {
-            console.log(i);
-            
-        }
+    let num = [0];
+    for (let i = 1; i <= 500; i = num[num.length - 2]) {
+        num.push(i + num[num.length - 1]);
+        console.log(num);
     }
-}
+};
+
 
 //  What is the difference between the sum of the squares 
 //  of the first ten natural numbers, 
@@ -74,7 +70,7 @@ function totalSum(e) {
     console.log("squared numbers", squared);
     console.log("natural numbers", sum);
     console.log("sum of squared numbers", squaredSum);
-    console.log("sum of numbers squared", sumSquared);
+    console.log("square of summed numbers", sumSquared);
     console.log("squared sum - sum squared",squaredSum - sumSquared);
 };
 
